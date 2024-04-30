@@ -29,6 +29,9 @@ $(document).ready(function(e){
     
 
     $('#speedRange').change(function(e){
+
+        // -------------- CLASE 1
+
         //Calculo velocidad RPM
         const num = $(this).val();
         let velocidad = (num * 7200) / 10;
@@ -66,7 +69,40 @@ $(document).ready(function(e){
         let aceleracion_traslacion = aceleracion_tangencial + aceleracion_centripeta;
         $('#txt-aceleracion-traslacion').val(aceleracion_traslacion.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
 
+
+        // ------------CLASE 2
+
+        //Calculo de inercia del plato
+        let inercia_plato = 1/2 * $('#txt-masa').val() * (Math.pow(0.013, 2) + Math.pow(0.0475, 2));
+        $('#txt-inercia-plato').val(inercia_plato.toString().match(/^-?\d+(?:\.\d{0,8})?/)[0]);
+
+        //INERCIA TOTAL
+        let inercia_total = inercia_plato + 0.00000173247 + 0.00009614;
+        $('#txt-inercia-total').val(inercia_total.toString().match(/^-?\d+(?:\.\d{0,7})?/)[0]);
+
+        //ENERGIA CINETICA
+        let energia_cinetica = 1/2 * inercia_total * Math.pow($('#txt-velocidad-angular').val(), 2);
+        $('#txt-energia-cinetica').val(energia_cinetica.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+        $('#txt-trabajo-energia').val(energia_cinetica.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+
+        //MOMENTO DE TORSION
+        let momento_torsion = inercia_total * aceleracion;
+        $('#txt-momento-torsion').val(momento_torsion.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+        $('#txt-ley-newton').val(momento_torsion.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+
+        //TRABAJO
+        let trabajo = momento_torsion * 1658.76;
+        $('#txt-trabajo').val(trabajo.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+
+        //POTENCIA 
+        let potencia = momento_torsion * velo_media;
+        $('#txt-potencia').val(potencia.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+
     });
 
     $('#speedRange').change();
+
+    $('#txt-masa').change(function(e){
+        $('#speedRange').change();
+    })
 });

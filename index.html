@@ -46,8 +46,8 @@
                 <div class="p-1">
                     <label for="txt-masa">Masa del Plato: </label>
                     <div class="flex justify-center items-center relative">
-                        <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-masa" id="txt-masa" value="31">
-                        <p class="absolute right-2 text-red-400 font-bold">g</p>
+                        <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-masa" id="txt-masa" value="0.031">
+                        <p class="absolute right-2 text-red-400 font-bold">kg</p>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,8 @@
                 </ul>
             </div>
             <div id="default-styled-tab-content ">
-                <div class="hidden p-4 rounded-lg h-full" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="hidden p-4 rounded-lg transition-all" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- CLASE 1-->
                     <div class="w-full grid grid-cols-4 gap-x-2 gap-y-2 h-full">
                         <div class="p-1 flex justify-center items-start flex-col">
                             <label for="txt-desplazamiento-angular">Desplazamiento Angular:</label>
@@ -132,8 +133,66 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden p-4 rounded-lg  " id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                   
+                <!-- CLASE 2 -->
+                <div class="hidden p-4 rounded-lg  transition-all" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <div class="w-full grid grid-cols-4 gap-x-2 gap-y-2 h-full">
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-inercia-plato">Inercia del Plato:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-inercia-plato" id="txt-inercia-plato" value="">
+                                <p class="absolute right-2 text-red-400 font-bold">kg/m^2</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-inercia-total">Inercia Total:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-inercia-total" id="txt-inercia-total" value="">
+                                <p class="absolute right-2 text-red-400 font-bold">kg/m^2</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-energia-cinetica">Energia Cinetica Rotacional:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-energia-cinetica" id="txt-energia-cinetica" value="">
+                                <p class="absolute right-2 text-red-400 font-bold">J</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-momento-torsion">Momento de Torsión:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-momento-torsion" id="txt-momento-torsion" value="">
+                                <p class="absolute right-2 text-red-400 font-bold">Nm</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-ley-newton">Segunda Ley de Newton:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-ley-newton" id="txt-ley-newton" value="">
+                                <p class="absolute right-2 text-red-400 font-bold">Nm</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-trabajo">Trabajo:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-trabajo" id="txt-trabajo" value="">
+                                <p class="absolute right-2 text-red-400 font-bold">j</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-potencia">Potencia:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-potencia" id="txt-potencia" value="">
+                                <p class="absolute right-2 text-red-400 font-bold">W</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-trabajo-energia">T. Trabajo y Energia Rotacion:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-trabajo-energia" id="txt-trabajo-energia" value="">
+                                <p class="absolute right-2 text-red-400 font-bold">rad/s^2</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="hidden p-4 rounded-lg " id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
                     
