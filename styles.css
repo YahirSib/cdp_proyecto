@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.disk {
+    width: 300px;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 2s linear infinite;
+}
+
+.shine {
+    width: 50%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5); /* Color y opacidad del brillo */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: top left;
+}
+
+.disk::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
