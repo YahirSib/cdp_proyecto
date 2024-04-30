@@ -98,6 +98,19 @@ $(document).ready(function(e){
         let potencia = momento_torsion * velo_media;
         $('#txt-potencia').val(potencia.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
 
+        //-----CLASE 3
+
+        //CONSERVIACION DE LA ENERGIA
+        let conservacion_energia = ((parseInt($('#txt-masa').val()) + 0.002 + 0.020) * 9.8 * 0.019) + (1/2 * inercia_total * Math.pow($('#txt-velocidad-angular').val(), 2)) ;
+        $('#txt-conservacion-energia').val(conservacion_energia.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+
+        //MOVIMIENTO ROTACIONAL
+        let rotacion_traslacion = (1/2 * (Math.pow((velo_angular * 0.007), 2)) * 0.332) + (1/2 * inercia_total * Math.pow($('#txt-velocidad-angular').val(), 2));
+        $('#txt-movimiento-rotacional').val(rotacion_traslacion.toString().match(/^-?\d+(?:\.\d{0,4})?/)[0]);
+
+        //CANTIDAD DE MOVIMIENTO ANGULAR
+        let movimiento_angular = 0.00009614 * velo_angular;
+        $('#txt-cantidad-movimiento').val(movimiento_angular.toString().match(/^-?\d+(?:\.\d{0,5})?/)[0]);
     });
 
     $('#speedRange').change();
