@@ -29,11 +29,17 @@ $(document).ready(function(e){
     
 
     $('#speedRange').change(function(e){
-
         // -------------- CLASE 1
 
         //Calculo velocidad RPM
         const num = $(this).val();
+
+        if(num == 0){
+            $('#stopButton').click();
+        }else{
+            $('#resumeButton').click();
+        }
+
         let velocidad = (num * 7200) / 10;
         $('#txt-velocidad').val(velocidad);
 
