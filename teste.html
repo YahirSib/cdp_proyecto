@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.disk {
+    width: 300px;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 2s linear infinite;
+    margin-top: 30px;
+}
+
+.shine {
+    width: 50%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5); /* Color y opacidad del brillo */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: top left;
+}
+
+.disk::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contenedor{
+    content: "";
+    display: flex;
+    position: relative;
+    background-color: #333;
+    height: 70%;
+    width: 55%;
+    justify-content: center;
+    align-items: start;
+    padding: 2%;
+}
+
+.caja-tornillos-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 93%;
+    width: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 5px;
+}
+
+.caja-tornillos-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 93%;
+    width: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 5px;
+}
+
+.tornillo{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="disk">
+            <div class="shine"></div>
+        </div>
+        <div class="caja-tornillos-left">
+            <div class="tornillo"></div>
+            <div class="tornillo"></div>
+            <div class="tornillo"></div>
+        </div>
+        <div class="caja-tornillos-right">
+            <div class="tornillo"></div>
+            <div class="tornillo"></div>
+            <div class="tornillo"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    // Puedes agregar más lógica de animación aquí si es necesario
+</script>
