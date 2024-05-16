@@ -26,7 +26,15 @@
                     <div class="tornillo"></div>
                 </div>
                 <div class="cosos">
-
+                    <div class="rectangulo1"></div>
+                    <div class="triangulo"></div>
+                    <div class="rectangulo2"></div>
+                    <div class="rectangulo3"></div>
+                </div>
+                <div class="aguja">
+                    <div class="circulo1"></div>
+                    <div class="circulo2"></div>
+                    <div class="triangulo2"></div>
                 </div>
             </div>
         </div>
@@ -80,6 +88,9 @@
                     </li>
                     <li class="me-2" role="presentation">
                         <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Clase 3</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings2-styled-tab" data-tabs-target="#styled2-settings" type="button" role="tab" aria-controls="settings2" aria-selected="false">Datos Extra</button>
                     </li>
                 </ul>
             </div>
@@ -228,6 +239,32 @@
                             <div class="flex justify-center items-center relative">
                                 <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-cantidad-movimiento" id="txt-cantidad-movimiento" value="">
                                 <p class="absolute right-2 text-red-400 font-bold">kgm/s^2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden p-4 rounded-lg " id="styled2-settings" role="tabpanel" aria-labelledby="settings2-tab">
+                    <!--CLASE 3-->
+                    <div class="w-full grid grid-cols-3 gap-x-2 gap-y-2 h-full">
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-masa-seguro">Masa del Seguro:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-masa-seguro" id="txt-masa-seguro" value="0.002">
+                                <p class="absolute right-2 text-red-400 font-bold">kg</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-masa-seguro">Masa del Eje:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-masa-seguro" id="txt-masa-seguro" value="0.02">
+                                <p class="absolute right-2 text-red-400 font-bold">kg</p>
+                            </div>
+                        </div>
+                        <div class="p-1 flex justify-center items-start flex-col">
+                            <label for="txt-masa-seguro">Tiempo:</label>
+                            <div class="flex justify-center items-center relative">
+                                <input class="bg-gray-300 rounded-lg border-solid border border-gray-200 text-left py-1 px-5 w-full" type="text" name="txt-masa-seguro" id="txt-masa-seguro" value="4.40">
+                                <p class="absolute right-2 text-red-400 font-bold">s</p>
                             </div>
                         </div>
                     </div>
