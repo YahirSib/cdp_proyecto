@@ -26,7 +26,8 @@ resumeButton.addEventListener('click', function() {
 
 $(document).ready(function(e){
 
-    
+    let masa_total = $('#txt-masa').val() + $('#txt-masa-seguro').val() + $('#txt-masa-eje').val();
+    $('#txt-masa-total').val(masa_total.toString().match(/^-?\d+(?:\.\d{0,3})?/)[0]);
 
     $('#speedRange').change(function(e){
         // -------------- CLASE 1
@@ -117,6 +118,10 @@ $(document).ready(function(e){
         //CANTIDAD DE MOVIMIENTO ANGULAR
         let movimiento_angular = 0.00009614 * velo_angular;
         $('#txt-cantidad-movimiento').val(movimiento_angular.toString().match(/^-?\d+(?:\.\d{0,5})?/)[0]);
+
+        let masa_total = parseFloat($('#txt-masa').val()) + parseFloat($('#txt-masa-seguro').val()) + parseFloat($('#txt-masa-eje').val());
+        $('#txt-masa-total').val(masa_total.toString().match(/^-?\d+(?:\.\d{0,3})?/)[0]);
+
     });
 
     $('#speedRange').change();
